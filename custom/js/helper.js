@@ -67,9 +67,18 @@ function renderClientList(data) {
                                     ${obj.Client.use_server_dns ? 'DNS enabled' : 'DNS disabled'}</span>
                                 <span class="info-box-text"><strong>IP Allocation</strong></span>`
                                 + allocatedIpsHtml
-                                + `<span class="info-box-text"><strong>Allowed IPs</strong></span>`
-                                + allowedIpsHtml
-                            +`</div>
+                                + `<div class="card collapsed-card mt-2">
+                                     <div class="card-header">
+                                       <h3 class="card-title">Allowed IPs</span></h3>
+                                       <div class="card-tools">
+                                         <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i></button>
+                                       </div>
+                                   </div>
+                                   <div class="card-body">
+                                     ${allowedIpsHtml}
+                                   </div>
+                                </div>
+                             </div>
                         </div>
                     </div>`
 
